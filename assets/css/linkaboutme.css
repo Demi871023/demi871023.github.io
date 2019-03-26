@@ -1,64 +1,42 @@
-            * 
-            {
-                box-sizing: border-box;
-            }
+    #mySidenav a
+    {
+        position: absolute; /* Position them relative to the browser window */
+        left: -100px; /* Position them outside of the screen */
+        transition: 0.3s; /* Add transition on hover */
+        padding: 15px; /* 15px padding */
+        width: 120px; /* Set a specific width */
+        text-decoration: none; /* Remove underline */
+        font-size: 20px; /* Increase font size */
+        color: white; /* White text color */
+        border-radius: 0 5px 5px 0; /* Rounded corners on the top right and bottom right side */
+    }
 
-            body
-            {
-                font-family: Arial, Helvetica, sans-serif;
-            }
+    #mySidenav a:hover
+    {
+        left: 0; /* On mouse-over, make the elements appear as they should */
+    }
 
-            /* Style the header */
-            .header
-            {
-                background-color: #FFF;
-                padding: 30px;
-                text-align: center;
-                font-size: 35px;
-            }
+    /* The about link: 20px from the top with a green background */
+    #Instagram
+    {
+        top: 300px;
+        background-color: #4CAF50;
+    }
 
-            /* Create three unequal columns that floats next to each other */
+    #Twitter
+    {
+        top: 360px;
+        background-color: #2196F3; /* Blue */
+    }
 
+    #Youtube
+    {
+        top: 420px;
+        background-color: #f44336; /* Red */
+    }
 
-            .column
-            {
-                float: left;
-                padding: 50px;
-                height: 500px; /* Should be removed. Only for demonstration */
-            }
-
-            /* Left and right column */
-            .left
-            {
-                width: 25%;
-            }
-
-            .right
-            {
-                width: 75%;
-            }
-
-            /* Clear floats after the columns */
-            .row:after
-            {
-                content: "";
-                display: table;
-                clear: both;
-            }
-
-            /* Style the footer */
-            .footer
-            {
-                background-color: #FFF;
-                padding: 20px;
-                text-align: center;
-            }
-
-            /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
-            @media (max-width: 600px)
-            {
-                .column.side, .column.middle
-                {
-                    width: 100%;
-                }
-            }
+    #GitHub
+    {
+        top: 480px;
+        background-color: #555 /* Light Black */
+    }
