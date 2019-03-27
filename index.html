@@ -6,11 +6,21 @@
         <meta charset="utf-8">
 
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        
 
         <link rel="stylesheet" href="assets/css/picbar.css" />
         <link rel="stylesheet" href="assets/css/main.css" />
         <link rel="stylesheet" href="assets/css/linkaboutme.css" />
-        <link rel="stylesheet" href="assets/css/sixpic_show.css" />
+        
+        <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+        
+        <script type="text/javascript">
+            $(document).ready(function(){
+                $("button").click(function(){
+                $("p").toggle();
+                 });
+            });
+        </script>
 
     </head>
 
@@ -74,11 +84,9 @@
         
         <div class="row">
             <div class="column left" style="background-color:#f1f1f1;">
-                <h2>
-                <div>
-                    .share()
-                </div>
-                </h2>
+                <button type="button">切换</button>
+                    <p>这是一个段落。</p>
+                    <p>这是另一个段落。</p>
                 <h2>Column 1</h2>
                 <p>Some text..</p>
             </div>
@@ -96,8 +104,6 @@
         <!--script-->
         <!--picbar.js-->
         <script src="assets/js/picbar.js"></script>
-        <script src="assets/js/share.min.js"></script>
-        <script src="assets/js/share.js"></script>
     
         
 
