@@ -1,40 +1,50 @@
-$(function(){
-	var $block = $('#abgne-20110714'),
-		$img = $block.find('ul li img'),
-		timer, speed = 3000;
+$(window).load(function(){
+	// 先取得先關區塊及圖片的寬高
+	// 並設定每張圖片的邊距、縮放倍數及動畫速度
+	var $block = $('#abgne-block-20120427'), 
+		$li = $block.find('li'), 
+		$img = $li.find('img'),
+		_width = $img.width(), 
+		_height = $img.height(), 
+		_margin = 10, 
+		_ratio = 2, 
+		_speed = 400;
  
-	// 幫 .mask 加上透明度
-	$block.find('.box .mask').css('opacity', .6);
-	// 當滑鼠移到小圖片時
-	$img.mouseover(function(e){
-		$img.filter('.selected').removeClass('selected');
-		var $this = $(this).addClass('selected');
+	// 把每一個 li 橫向排列好
+	$li.each(function(i) {
+		var $this = $(this), 
+			_left = i * (_width + _margin);
  
-		// 把小圖的相關資訊顯示在 .box 中
-		$('#abgne-title').html($this.attr('alt'));
-		$('#abgne-link').attr('href', $this.attr('href'));
-		$('#abgne-img').attr('src', $this.attr('src'));
+		// 先把排列後的位置記錄在 .data('position') 中
+           $this.css('left', _left).data('position', {
+			left: _left,
+			top: parseInt($this.css('top'), 10) || 0
+		});
+	}).hover(function(){	// 當滑鼠移入 $li 時
+		var $this = $(this), 
+			positionData = $this.data('position');
  
-		if(e.pageX == undefined){
-			// 啟動計時器
-			timer = setTimeout(move, speed);
-		}
+		// 改變 z-index 以免被遮到, 並移動 left 及 top
+		// 同時找到 img 縮放寬高為原來的 _ratio 倍
+		$this.css('z-index', 1).stop().animate({
+			left: positionData.left - (_width * _ratio - _width) / 2,
+			top: positionData.top - (_height * _ratio - _height) / 2
+		}, _speed).find('img').stop().animate({
+			width: _width * _ratio, 
+			height: _height * _ratio
+		}, _speed);
+	}, function(){	// 當滑鼠移出 $li 時
+		var $this = $(this), 
+			positionData = $this.data('position');
+ 
+		// 還原 z-index 並移回原來的 left 及 top
+		// 同時找到 img 還原寬高
+		$this.css('z-index', 0).stop().animate({
+			left: positionData.left,
+			top: positionData.top
+		}, _speed).find('img').stop().animate({
+			width: _width, 
+			height: _height
+		}, _speed);
 	});
- 
-	// 當滑鼠移入到 $block 時
-	$block.hover(function(e){
-		if(e.pageX != undefined) clearTimeout(timer);
-	}, function(){
-		// 啟動計時器
-		timer = setTimeout(move, speed);
-	});
- 
-	// 控制輪播用
-	function move() {
-		var i = $img.index($img.filter('.selected'));
-		$img.eq((i + 1) % $img.length).mouseover();
-	}
- 
-	// 啟動計時器
-	timer = setTimeout(move, speed);
 });
