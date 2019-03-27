@@ -1,80 +1,18 @@
-#abgne-20110714 {
-	position: relative;
-	width: 288px;
-	padding: 6px;
-	background: #33CCFF;
-	overflow: hidden;
-}
-#abgne-20110714 img {
-	display: block;
-	border: 1px solid #666;
-}
-#abgne-20110714 .content {
-	clear: both;
-	height: 142px;
-	overflow: hidden;
-}
-#abgne-20110714 .content .box {
-	position: relative;
-	width: 188px;
-	float: left;
-}
-#abgne-20110714 .content .side {
+#abgne-block-20120427, #abgne-block-20120427 li {
+	list-style: none;
 	margin: 0;
 	padding: 0;
-	list-style: none;
-	float: right;
-	width: 93px;
 }
-#abgne-20110714 .content .side li.first {
-	zoom:1;
-	padding: 0 0 3px;
-	*padding: 0;
+#abgne-block-20120427 {
+	position: relative;
+	top: 100px;
+	left: 100px;
+	width: 650px;	/* (圖片的寬度 +  _margin) * 數量 - _margin */
+	height: 100px;	/* 圖片的高度 */
 }
-#abgne-20110714 .box img {
+#abgne-block-20120427 li {
 	position: absolute;
-	top: 0;
 }
-#abgne-20110714 .box h3 {
-	margin: 0;
-	position: absolute;
-	top: 102px;
-	width: 190px;
-	color: #fff;
-	padding: 8px 0;
-	height: 22px;
-	text-align: center;
-	z-index: 1000;
-	overflow: hidden;
-}
-#abgne-20110714 .box .mask {
-	position: absolute;
-	background: #000;
-	top: 102px;
-	height: 38px;
-	width: 190px;
-	z-index: 999;
-}
-#abgne-20110714 .list {
-	clear: both;
-	margin: 0;
-	padding: 3px 0 0;
-	list-style: none;
-	width: 100%;
-}
-#abgne-20110714 .list li {
-	float: left;
-	width: 93px;
-	padding-right: 4px;
-}
-#abgne-20110714 .list .last {
-	padding: 0 0 0 1px;
-}
-#abgne-20110714 .box img {
-	width: 188px;
-	height: 138px;
-}
-#abgne-20110714 .side img, #abgne-20110714 .list img {
-	width: 91px;
-	height: 66px;
+#abgne-block-20120427 li a img {
+	border: none;
 }
