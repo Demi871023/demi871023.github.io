@@ -2,12 +2,12 @@
 	position: relative;
 	width: 288px;
 	padding: 6px;
-	background: #303030;
+	background: #33CCFF;
 	overflow: hidden;
 }
 #abgne-20110714 img {
 	display: block;
-	border: 1px solid #33CCFF;
+	border: 1px solid #666;
 }
 #abgne-20110714 .content {
 	clear: both;
