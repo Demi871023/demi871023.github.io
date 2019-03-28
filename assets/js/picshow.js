@@ -10,7 +10,7 @@ $(function(){
 			$a = $this.find('a'),  
 			$thumb = $a.find('img')
  
-		_html += '<a href="' + $a.attr('href') + '"><img src="' + $thumb.attr("src").replace(/(\.[^\.]+)$/, '-normal') +".jpg" '" /></a>';
+		_html += '<a href="' + $a.attr('href') + '"><img src="' + $thumb.attr("src").replace(/(\.[^\.]+)$/, '-normal.jpg')'" /></a>';
 	});
  
 	// 把產生的新內容加到 $block 中
