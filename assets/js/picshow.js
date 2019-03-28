@@ -1,6 +1,6 @@
 $(function(){
 	// 取得 .abgne-block-20110806 及其子孫元素 li
-	var $block = $('.abgne-block-20110806'), 
+	var $block = $(".abgne-block-20110806"), 
 		$li = $block.find('li');
  
 	// 從 li 中取出超連結及大圖片來產生新的內容
@@ -10,7 +10,7 @@ $(function(){
 			$a = $this.find('a'),  
 			$thumb = $a.find('img')
  
-		_html += '<a href="' + $a.attr('href') + '"><img src="' + $thumb.attr('src').replace(/(\.[^\.]+)$/, '-normal') + '" /></a>';
+		_html += '<a href="' + $a.attr('href') + '"><img src="' + $thumb.attr("src").replace(/(\.[^\.]+)$/, '-normal') +".jpg" '" /></a>';
 	});
  
 	// 把產生的新內容加到 $block 中
