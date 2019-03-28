@@ -1,0 +1,38 @@
+.abgne-block-20110806 {
+	width: 640px;
+	height: 380px;
+	border: 1px solid #333;
+	background: #ccc;
+	position: relative;
+	overflow: hidden;
+}
+.abgne-block-20110806 * {
+	margin: 0;
+	padding: 0;
+	border: none;
+}
+.abgne-block-20110806 ul, .abgne-block-20110806 li {
+	list-style: none;
+}
+.abgne-block-20110806 ul {
+	position: absolute;
+	right: 10px;
+	bottom: 15px;
+	z-index: 9999;
+}
+.abgne-block-20110806 li {
+	float: left;
+	margin-left: 5px;
+}
+.abgne-block-20110806 li a {
+	display: block;
+	width: 50px;
+	height: 50px;
+	border: 1px solid #fff;
+}
+.abgne-block-20110806 li a:hover {
+	border: 1px solid #f9f;
+}
+.abgne-block-20110806 li a img {
+	border: none;
+}
