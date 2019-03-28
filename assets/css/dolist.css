@@ -8,12 +8,11 @@ $font-color: white;
 
 .dolist {
   @include flex-box;
-  margin: 10px auto;
   background:#FFFFFF;
-  width: 75%;
+  width: 100%;
   height: 80px;
   color: #33CCFF;
-  font-size: 30px;
+  font-size: 15px;
 }
 
 .show,.item {
