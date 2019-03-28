@@ -1,0 +1,37 @@
+$bg-color: #00DDDD;
+$font-color: white;
+@mixin flex-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dolist {
+  @include flex-box;
+  margin: 10px auto;
+  background:#FFFFFF;
+  width: 75%;
+  height: 80px;
+  color: #33CCFF;
+  font-size: 30px;
+}
+
+.show,.item {
+  @include flex-box;
+  margin: 10px auto;
+}
+
+input {
+  width: 200px;
+  margin: 10px;
+}
+
+button {
+  background: #33CCFF;
+  color: $font-color;
+  font-size: 18px;
+  margin: 10px;
+  cursor: pointer;
+  border: none;
+  &:hover {background-color: #33CCFF;}
+}
