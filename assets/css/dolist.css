@@ -8,7 +8,7 @@ $font-color: white;
 
 .dolist {
   @include flex-box;
-  background:#FFFFFF;
+  background:#DDDDDD;
   width: 100%;
   height: 80px;
   color: #33CCFF;
