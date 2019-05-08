@@ -15,20 +15,9 @@
         <link rel="stylesheet" href="assets/css/timeclock.css" />
         
         <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
-        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyABnFrm63Mw1BpJqDjL9EuHJ2dtMvCJehc"></script>
-
-        <script type="text/javascript">
-            function initialize()
-            {
-                var mapOptions = {
-                center: { lat: -34.397, lng: 150.644},
-                zoom: 8
-                };
-                var map = new google.maps.Map(document.getElementById('map-canvas'),mapOptions);
-            }
-            google.maps.event.addDomListener(window, 'load', initialize);
-        </script>
         
+        
+
         <!--<script type="text/javascript">
             $(document).ready(function(){
                 $("button").click(function(){
@@ -160,6 +149,19 @@
         <script src="assets/js/picbar.js"></script>
         <script src="assets/js/dolist.js"></script>
     	<script src="assets/js/timeclock.js"></script>
+        <script type="text/javascript">
+            function initialize()
+            {
+                var mapOptions = {
+                center: { lat: -34.397, lng: 150.644},
+                zoom: 8
+                };
+                var map = new google.maps.Map(document.getElementById('map-canvas'),mapOptions);
+            }
+            google.maps.event.addDomListener(window, 'load', initialize);
+        </script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyABnFrm63Mw1BpJqDjL9EuHJ2dtMvCJehc&callback=initMap"
+    async defer></script>
         
 
     </body>
