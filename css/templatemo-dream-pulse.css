@@ -391,7 +391,7 @@ a {
 /*---------------*/
 
 figure.effect-bubba {
-  background: #069;
+  background: #3085a3;
 }
 
 figure.effect-bubba img {
@@ -672,7 +672,7 @@ figure.effect-bubba:hover p {
   }
 
   .tm-box-pad {
-    padding: 50px 30px;
+    padding: 20px 10px;
   }
 }
 
